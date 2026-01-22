@@ -33,7 +33,7 @@ const Index = () => {
       <Header />
       
       <main className="container mx-auto px-4 py-8">
-        {/* Overview Section with H1 */}
+        {/* Overview Section with H1 and Stats */}
         <OverviewSection />
 
         {error && (
@@ -46,6 +46,52 @@ const Index = () => {
           </Alert>
         )}
 
+        {/* Stats Grid - Always visible above the fold */}
+        {isLoading ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="glass-card p-6 space-y-3">
+                <div className="h-4 w-24 bg-secondary rounded animate-pulse" />
+                <div className="h-10 w-32 bg-secondary rounded animate-pulse" />
+                <div className="h-3 w-20 bg-secondary rounded animate-pulse" />
+              </div>
+            ))}
+          </div>
+        ) : data ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <StatCard
+              title="Total EVs"
+              value={data.total}
+              subtitle="Registered vehicles"
+              icon={Car}
+              delay={0}
+            />
+            <StatCard
+              title="Battery Electric"
+              value={data.bev}
+              subtitle={`${bevPercentage}% of total`}
+              icon={Battery}
+              variant="bev"
+              delay={100}
+            />
+            <StatCard
+              title="Plug-in Hybrid"
+              value={data.phev}
+              subtitle={`${((data.phev / data.total) * 100).toFixed(1)}% of total`}
+              icon={Plug}
+              variant="phev"
+              delay={200}
+            />
+            <StatCard
+              title="Avg. Range"
+              value={`${data.avgRange} mi`}
+              subtitle="Electric-only range"
+              icon={Gauge}
+              delay={300}
+            />
+          </div>
+        ) : null}
+
         {isLoading ? (
           <LoadingSkeleton />
         ) : data ? (
@@ -53,39 +99,6 @@ const Index = () => {
             {/* Latest Data Section */}
             <LatestDataSection>
               <div className="space-y-8">
-                {/* Stats Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  <StatCard
-                    title="Total EVs"
-                    value={data.total}
-                    subtitle="Registered vehicles"
-                    icon={Car}
-                    delay={0}
-                  />
-                  <StatCard
-                    title="Battery Electric"
-                    value={data.bev}
-                    subtitle={`${bevPercentage}% of total`}
-                    icon={Battery}
-                    variant="bev"
-                    delay={100}
-                  />
-                  <StatCard
-                    title="Plug-in Hybrid"
-                    value={data.phev}
-                    subtitle={`${((data.phev / data.total) * 100).toFixed(1)}% of total`}
-                    icon={Plug}
-                    variant="phev"
-                    delay={200}
-                  />
-                  <StatCard
-                    title="Avg. Range"
-                    value={`${data.avgRange} mi`}
-                    subtitle="Electric-only range"
-                    icon={Gauge}
-                    delay={300}
-                  />
-                </div>
 
                 {/* Key Takeaways */}
                 <KeyTakeaways 
