@@ -58,7 +58,7 @@ const Index = () => {
             ))}
           </div>
         ) : data ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <StatCard
               title="Total EVs"
               value={data.total}
@@ -81,13 +81,6 @@ const Index = () => {
               icon={Plug}
               variant="phev"
               delay={200}
-            />
-            <StatCard
-              title="Avg. Range"
-              value={`${data.avgRange} mi`}
-              subtitle="Electric-only range"
-              icon={Gauge}
-              delay={300}
             />
           </div>
         ) : null}
