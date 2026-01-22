@@ -3,20 +3,182 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Washington State EV Registrations Tracker | BEV & PHEV Data</title>
+    <meta name="description" content="Track Washington State electric vehicle registrations by county, brand, and type. Explore BEV and PHEV data from the Department of Licensing." />
+    <meta name="author" content="Washington EV Tracker" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://washingtonevtracker.com/" />
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
+    <meta property="og:url" content="https://washingtonevtracker.com/" />
+    <meta property="og:title" content="Washington State EV Registrations Tracker | BEV & PHEV Data" />
+    <meta property="og:description" content="Track Washington State electric vehicle registrations by county, brand, and type. Explore BEV and PHEV data from the Department of Licensing." />
+    <meta property="og:image" content="https://washingtonevtracker.com/og-image.png" />
+    <meta property="og:site_name" content="Washington EV Tracker" />
+    
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:url" content="https://washingtonevtracker.com/" />
+    <meta name="twitter:title" content="Washington State EV Registrations Tracker | BEV & PHEV Data" />
+    <meta name="twitter:description" content="Track Washington State electric vehicle registrations by county, brand, and type. Explore BEV and PHEV data from the Department of Licensing." />
+    <meta name="twitter:image" content="https://washingtonevtracker.com/og-image.png" />
+    
+    <!-- Additional SEO -->
+    <meta name="keywords" content="washington ev registrations, washington state electric vehicle registrations, bev registrations washington, phev registrations washington, ev registrations by county washington" />
+    <meta name="geo.region" content="US-WA" />
+    <meta name="geo.placename" content="Washington State" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Washington EV Tracker",
+      "url": "https://washingtonevtracker.com/",
+      "description": "Track Washington State electric vehicle registrations including BEV and PHEV data by county and brand.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://washingtonevtracker.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Washington EV Tracker",
+      "url": "https://washingtonevtracker.com/",
+      "logo": "https://washingtonevtracker.com/favicon.ico",
+      "description": "Independent resource tracking electric vehicle registrations in Washington State using official Department of Licensing data."
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "Washington State Electric Vehicle Registrations (BEV & PHEV)",
+      "description": "Comprehensive dataset of battery electric vehicle (BEV) and plug-in hybrid electric vehicle (PHEV) registrations tracked from Washington State Department of Licensing, with breakdowns by county, brand, and model year.",
+      "url": "https://washingtonevtracker.com/",
+      "creator": {
+        "@type": "Organization",
+        "name": "Washington EV Tracker"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Washington State Department of Licensing"
+      },
+      "temporalCoverage": "Current registrations; updated regularly",
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": "Washington State, USA"
+      },
+      "keywords": [
+        "washington ev registrations",
+        "washington state electric vehicle registrations",
+        "bev registrations washington",
+        "phev registrations washington",
+        "ev registrations by county washington",
+        "electric vehicle adoption washington"
+      ],
+      "license": "https://data.wa.gov/",
+      "isAccessibleForFree": true
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many EVs are registered in Washington State?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Washington State has one of the highest electric vehicle adoption rates in the nation. The exact count is displayed in real-time on this dashboard, sourced directly from the Washington State Department of Licensing registration data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between BEV and PHEV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BEV (Battery Electric Vehicle) runs entirely on electric power with no gasoline engine. PHEV (Plug-in Hybrid Electric Vehicle) has both an electric motor and a gasoline engine, offering electric-only range plus extended range from gasoline."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which counties have the most EV registrations in Washington?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "King County leads Washington State in EV registrations, followed by Snohomish, Pierce, and Clark counties. Urban areas with higher population density and charging infrastructure tend to have more EV registrations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often is Washington EV Tracker updated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The dashboard fetches data directly from the Washington State Department of Licensing's public dataset, which is updated regularly. Each time you visit, you see the most current available registration data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does the EV registration data come from?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All data is sourced from the Washington State Department of Licensing (DOL) Electric Vehicle Population Data, a publicly available dataset on data.wa.gov."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this include all registered vehicles or only new sales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This dataset includes all currently registered electric vehicles in Washington State, not just new sales. It represents the total active EV population on Washington roads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why might King County have more EV registrations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "King County's high EV registration count reflects its large population, higher median income, extensive charging infrastructure, environmental awareness, and favorable policies. Seattle and surrounding tech hubs also contribute to early EV adoption."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this data official?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all data is sourced from official Washington State Department of Licensing records. This dashboard visualizes that public data in an accessible format but is not affiliated with the state government."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How should I interpret BEV vs PHEV shares?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The BEV vs PHEV breakdown shows the proportion of fully electric vehicles versus plug-in hybrids. A higher BEV share indicates more adoption of all-electric vehicles, while PHEVs offer a transitional option for drivers needing extended range."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the average electric range of EVs in Washington?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The average electric-only range varies based on the mix of vehicles registered. This dashboard displays the current average range calculated from all registered EVs in the state."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>
